@@ -3,7 +3,7 @@ from typing import List
 
 
 hypen_e_dot="-e ."
-def get_requirements(file_path:str):
+def get_requirements(file_path:str) ->List[str]:
     "This will install all the packages "
     requirements=[]
     with open(file_path) as file_obj:
@@ -12,10 +12,7 @@ def get_requirements(file_path:str):
         
         if hypen_e_dot in requirements:
             requirements.remove(hypen_e_dot)
-            
-
-
-
+    return requirements
 
 
 setup(
